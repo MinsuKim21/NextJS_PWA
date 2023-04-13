@@ -12,7 +12,7 @@ const withOffline = require('next-offline')
 module.exports = withPWA({
   // next.js config
   experimental: {
-    // appDir: true,
+    appDir: true,
   },
   withOffline,
 })
