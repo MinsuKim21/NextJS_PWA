@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import DarkModeToggleBtn from './DarkModeToggleBtn'
 
 type NavProps = {
   navItems: { name: string; routePath: string }[]
@@ -12,7 +13,6 @@ const Nav: React.FC<NavProps> = ({ navItems }) => {
   const router = useRouter()
 
   const getLinkClassName = (path: string): string => {
-    console.log('현재위치 : ', router.pathname)
     return router.pathname === path ? activeStyle : defaultStyle
   }
 
@@ -20,15 +20,17 @@ const Nav: React.FC<NavProps> = ({ navItems }) => {
     <nav className=" md:block">
       <ul className="w-auto flex flex-row justify-center items-center">
         {navItems.map((item) => {
-          console.log('아이템 : ', item)
           return (
-            <li key={item.routePath} className="font-medium text-base px-4">
+            <li key={item.routePath} className="btn btn-ghost font-medium text-base px-4">
               <Link href={item.routePath} className={getLinkClassName(item.routePath)}>
                 {item.name}
               </Link>
             </li>
           )
         })}
+        <li>
+          <DarkModeToggleBtn />
+        </li>
       </ul>
     </nav>
   )

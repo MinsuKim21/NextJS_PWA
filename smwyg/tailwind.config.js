@@ -25,6 +25,12 @@ module.exports = {
         myPupple: '#BE19FC',
       },
       keyframes: {
+        typingCursor: {
+          from: {
+            borderRight: '2px solid white',
+          },
+          to: { borderRight: '2px solid black' },
+        },
         bounceSlow: {
           '0%, 100%': {
             transform: 'translateY(-30%)',
@@ -37,9 +43,15 @@ module.exports = {
         },
       },
       animation: {
+        typingCursor: 'typingCursor 0.7s ease-in-out 0ms 5',
+        'bounce-slow': 'bounceSlow 1.5s infinite',
         'bounce-slow': 'bounceSlow 1.5s infinite',
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: ['light', 'forest'],
+    darkTheme: 'forest',
+  },
 }
