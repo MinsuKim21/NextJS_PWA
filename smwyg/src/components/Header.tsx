@@ -30,6 +30,7 @@ const Header: React.FC = () => {
                 alt="dark logo"
                 width={100}
                 height={30}
+                priority
                 className="sm:w-250 w-100"
               />
             ) : (
@@ -38,6 +39,7 @@ const Header: React.FC = () => {
                 alt="light logo"
                 width={100}
                 height={30}
+                priority
                 className="sm:w-250 w-100"
               />
             )}
