@@ -15,7 +15,7 @@ export default function About() {
         <div className="text-xl font-black">
           <br />
           <p>안드로이드</p>
-          <ol type="1" className="!list-decimal pl-5 sm:text-xl sm:font-black text-base font-bold">
+          <ol type="1" className="!list-decimal pl-7 sm:text-xl sm:font-black text-base font-bold">
             <li>크롬으로 next-js-pwa-gules.vercel.app 접속</li>
             <li>점세개 메뉴 누름 (캐밥메뉴라고 함 ㅋㅋ)</li>
             <li>SMWYG 설치 누름</li>
@@ -25,7 +25,7 @@ export default function About() {
         <br />
         <div className="text-xl font-black">
           <p>IOS</p>
-          <ol type="1" className="!list-decimal pl-5 sm:text-xl sm:font-black text-base font-bold">
+          <ol type="1" className="!list-decimal pl-7 sm:text-xl sm:font-black text-base font-bold">
             <li>사파리로 next-js-pwa-gules.vercel.app 접속</li>
             <li>책깔피 옆에 공유버튼 누름</li>
             <li>홈 화면에 추가 누름</li>
