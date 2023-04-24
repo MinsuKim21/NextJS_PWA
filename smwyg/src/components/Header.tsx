@@ -1,32 +1,30 @@
 import Link from 'next/link'
 import Nav from './Nav'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Logo from '../../public/logo.png'
 import DarkLogo from '../../public/darklogo.png'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import DarkModeToggle from '@/components/DarkModeToggleBtn'
 
 const navItems = [
   { name: 'About', routePath: '/about' },
-  { name: 'Contect', routePath: '/contect' },
-  { name: 'Try', routePath: '/preterview' },
+  { name: 'Blog', routePath: '/blog' },
+  { name: 'Try it now', routePath: '/preterview' },
 ]
 
 const Header: React.FC = () => {
   const [isDarkMode, setDarkMode] = useState<boolean>(false)
 
-  useEffect(() => {
-    const storedValue = localStorage.getItem('theme')
-    if (storedValue !== null) {
-      storedValue === 'light' ? setDarkMode(false) : setDarkMode(true)
-    }
-  }, [])
+  const handleDarkModeChange = (darkMode: boolean | ((prevState: boolean) => boolean)) => {
+    setDarkMode(darkMode)
+  }
 
   return (
-    <header className="w-full h-14 sm:h-16 fixed z-10 flex justify-center px-5 sm:px-8 border-b">
+    <header className="w-full bg-base-100 h-14 sm:h-16 fixed z-10 flex justify-center px-5 sm:px-8 border-b">
       <div className="max-w-screen-lg w-full flex justify-between items-center">
         <div>
           <Link href="/">
-            {isDarkMode && isDarkMode ? (
+            {isDarkMode ? (
               <Image
                 src={DarkLogo}
                 alt="dark logo"
@@ -46,6 +44,7 @@ const Header: React.FC = () => {
           </Link>
         </div>
         <Nav navItems={navItems} />
+        <DarkModeToggle isDarkMode={isDarkMode} setIsDarkMode={handleDarkModeChange} />
       </div>
     </header>
   )

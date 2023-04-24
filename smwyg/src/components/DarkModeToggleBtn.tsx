@@ -2,10 +2,14 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { themeChange } from 'theme-change'
 
-function DarkModeToggleButton() {
-  const THEME_LIGHT = useMemo<string>(() => 'light', [])
-  const THEME_DARK = useMemo<string>(() => 'forest', [])
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
+type DarkModeToggleButtonProps = {
+  isDarkMode: boolean
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function DarkModeToggleButton({ isDarkMode, setIsDarkMode }: DarkModeToggleButtonProps) {
+  const THEME_LIGHT = useMemo<string>(() => 'emerald', [])
+  const THEME_DARK = useMemo<string>(() => 'mytheme', [])
   const systemPreference: boolean = useMediaQuery({
     query: '(prefers-color-scheme: dark)',
   })
@@ -26,12 +30,12 @@ function DarkModeToggleButton() {
       localStorage.setItem('theme', prev ? THEME_LIGHT : THEME_DARK)
       return !prev
     })
-    window.location.reload()
-  }, [THEME_LIGHT, THEME_DARK])
+    // window.location.reload()
+  }, [THEME_LIGHT, THEME_DARK, setIsDarkMode])
 
   return (
     <div
-      className="btn btn-square btn-ghost w-12 h-10 rounded-lg"
+      className="btn btn-square btn-ghost sm:w-12 sm:h-10 w-4 h-4 rounded-lg"
       role="presentation"
       data-set-theme={isDarkMode ? THEME_LIGHT : THEME_DARK}
       data-act-class="ACTIVECLASS"
