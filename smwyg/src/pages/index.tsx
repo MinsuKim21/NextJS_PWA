@@ -4,7 +4,7 @@ import useDelayedRender from '@/hook/useDelayed'
 
 export default function Home() {
   const { showHtml, html } = useDelayedRender(
-    3000,
+    2500,
     <div className="mt-20 sm:mx-20 mx-10 mb-36 bg-myOrange rounded-md animate-slide-top">
       <ContextBox
         firstContext="SMWYG는 뭐야??"
