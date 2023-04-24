@@ -22,7 +22,7 @@ module.exports = {
       },
       colors: {
         myGreen: '#00Fd00',
-        myPupple: '#BE19FC',
+        myPurple: '#BE19FC',
         myOrange: '#FAA937',
       },
       keyframes: {
