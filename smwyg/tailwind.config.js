@@ -23,6 +23,7 @@ module.exports = {
       colors: {
         myGreen: '#00Fd00',
         myPupple: '#BE19FC',
+        myOrange: '#FAA937',
       },
       keyframes: {
         typingCursor: {
@@ -30,6 +31,10 @@ module.exports = {
             borderRight: '2px solid white',
           },
           to: { borderRight: '2px solid black' },
+        },
+        'slide-top': {
+          from: { transform: 'translateY(100%)', opacity: 0 },
+          to: { transform: 'translateY(0)', opacity: 1 },
         },
         bounceSlow: {
           '0%, 100%': {
@@ -44,6 +49,7 @@ module.exports = {
       },
       animation: {
         typingCursor: 'typingCursor 0.7s ease-in-out 0ms 5',
+        'slide-top': 'slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
         'bounce-slow': 'bounceSlow 1.5s infinite',
         'bounce-slow': 'bounceSlow 1.5s infinite',
       },
@@ -51,7 +57,23 @@ module.exports = {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['light', 'forest'],
-    darkTheme: 'forest',
+    themes: [
+      'emerald',
+      'forest',
+      {
+        mytheme: {
+          primary: '#1EB854',
+          secondary: '#537BF8',
+          accent: '#D99330',
+          neutral: '#110E0E',
+          'base-100': '#171212',
+          info: '#3ABFF8',
+          success: '#36D399',
+          warning: '#FBBD23',
+          error: '#F87272',
+        },
+      },
+    ],
+    darkTheme: 'mytheme',
   },
 }
