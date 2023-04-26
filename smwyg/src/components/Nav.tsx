@@ -20,7 +20,10 @@ const Nav: React.FC<NavProps> = ({ navItems }) => {
       <ul className="w-auto flex flex-row justify-center items-center">
         {navItems.map((item) => {
           return (
-            <li key={item.routePath} className="btn btn-ghost font-black md:text-base text-xs px-4">
+            <li
+              key={item.routePath}
+              className="btn btn-ghost font-black md:text-base text-3xs px-4"
+            >
               <Link href={item.routePath} className={getLinkClassName(item.routePath)}>
                 {item.name}
               </Link>
