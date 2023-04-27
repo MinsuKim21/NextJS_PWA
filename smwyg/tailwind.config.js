@@ -25,7 +25,7 @@ module.exports = {
         mobileScreen: 'calc(var(--vh, 1vh) * 100)',
       },
       colors: {
-        myGreen: '#00Fd00',
+        myGreen: '#0BE649',
         myPurple: '#BE19FC',
         myOrange: '#FAA937',
       },
