@@ -22,7 +22,7 @@ const Nav: React.FC<NavProps> = ({ navItems }) => {
           return (
             <li
               key={item.routePath}
-              className="btn btn-ghost sm:font-black font-bold md:text-base text-2sxs px-0"
+              className="btn btn-ghost sm:font-black font-bold md:text-base text-2xs px-0"
             >
               <Link href={item.routePath} className={getLinkClassName(item.routePath)}>
                 {item.name}
