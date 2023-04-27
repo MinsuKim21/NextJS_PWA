@@ -5,7 +5,7 @@ export default function Blog() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
   return (
-    <main className="pt-20 flex flex-col space-y-10 justify-around sm:mx-20 mx-10 h-full">
+    <main className="pt-20 justify-around sm:mx-20 mx-10 h-full">
       {isLoading ? null : (
         <div className="mt-2 mx-4 space-y-4">
           <Skeleton />

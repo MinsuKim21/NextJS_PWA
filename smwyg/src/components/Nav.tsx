@@ -17,7 +17,7 @@ const Nav: React.FC<NavProps> = ({ navItems }) => {
 
   return (
     <nav>
-      <ul className="w-full flex flex-row space-x-2">
+      <ul className="w-full flex flex-row space-x-2 sm:space-x-10">
         {navItems.map((item) => {
           return (
             <li
