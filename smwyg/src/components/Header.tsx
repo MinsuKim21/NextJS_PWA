@@ -21,7 +21,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="w-full bg-base-100 h-14 sm:h-16 fixed z-10 flex justify-center px-5 sm:px-8 border-b">
-      <div className="max-w-screen-lg w-full flex justify-between items-center">
+      <div className="max-w-screen-lg w-full flex justify-between items-center space-x-1">
         <div>
           <Link href="/">
             {isDarkMode ? (
