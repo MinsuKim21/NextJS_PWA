@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="pt-20 flex flex-col space-y-10 justify-around px-20 mb-30">
+    <main className="pt-20 flex flex-col space-y-10 justify-around sm:mx-20 mx-10 mb-30">
       <div className="w-full">
         <h1 className="text-primary w-full text-2xl font-black">PWA란?</h1>
 

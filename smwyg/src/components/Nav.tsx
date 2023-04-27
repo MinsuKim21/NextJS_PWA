@@ -17,7 +17,7 @@ const Nav: React.FC<NavProps> = ({ navItems }) => {
 
   return (
     <nav>
-      <ul className="w-auto flex flex-row justify-center items-center">
+      <ul className="w-auto flex flex-row justify-around items-center">
         {navItems.map((item) => {
           return (
             <li
