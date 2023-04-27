@@ -37,3 +37,6 @@ next-env.d.ts
 #PWA
 public/*.js
 public/*.map
+
+#env
+.env
