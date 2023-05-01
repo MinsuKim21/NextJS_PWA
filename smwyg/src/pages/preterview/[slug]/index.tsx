@@ -16,10 +16,12 @@ export default function index({ params }: Props) {
 
   const [ans, setAns] = useState('')
 
-  const inputRef = useRef(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    inputRef.current.focus()
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
   }, [])
 
   const handleText = (e: React.ChangeEvent<HTMLInputElement>) => {
