@@ -25,11 +25,11 @@ export default function TypingAni(props: Props) {
 
   return (
     <div className="w-full">
-      <pre
+      <p
         className={`${props.textColor} ${props.fontSize} ${props.fontWeight} inline animate-typingCursor`}
       >
         {text}
-      </pre>
+      </p>
     </div>
   )
 }
