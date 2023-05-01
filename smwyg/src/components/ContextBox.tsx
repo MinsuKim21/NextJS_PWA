@@ -12,7 +12,7 @@ export default function ContextBox({ firstContext, secContext, time }: ContextBo
         <>
           <p className="text-right px-5 text-white">{time}</p>
           <div className="flex flex-row items-center justify-end py-2 px-4">
-            <div className=" bg-primary text-primary-content py-2 px-4 rounded-xl max-w-xs break-all sm:text-lg text-base sm:font-semibold font-medium text-left">
+            <div className=" bg-primary text-primary-content px-4 py-2 rounded-xl max-w-xs break-all sm:text-lg text-base sm:font-semibold font-medium text-left">
               {firstContext}
             </div>
           </div>
@@ -23,7 +23,7 @@ export default function ContextBox({ firstContext, secContext, time }: ContextBo
         <>
           <p className="text-left px-5 text-white">{time}</p>
           <div className="flex flex-row items-center justify-start py-2 px-4">
-            <div className="bg-secondary text-secondary-content py-2 px-4 rounded-xl max-w-xs break-all sm:text-lg text-base sm:font-semibold font-medium text-left">
+            <div className="bg-secondary text-secondary-content px-4 py-2 rounded-xl max-w-xs break-all sm:text-lg text-base sm:font-semibold font-medium text-left">
               {secContext}
             </div>
           </div>
